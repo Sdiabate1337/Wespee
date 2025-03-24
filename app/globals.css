@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 10, 10, 15;
+  --background-end-rgb: 10, 10, 15;
+}
+
+html.light-mode {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 240, 240, 245;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  transition: background 0.3s ease, color 0.3s ease;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.glow-effect {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, rgba(10, 10, 15, 0) 70%);
+  filter: blur(30px);
+  z-index: 0;
+}
+
+/* Animations pour la navbar */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.navbar-anim {
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* Animation du bouton de thème */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.theme-switch-icon {
+  transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.theme-switch-icon:hover {
+  transform: rotate(45deg);
+}
+
+/* Motif de grille pour le fond */
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+/* Animation pour le badge "en direct" */
+@keyframes pulse {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+/* Masquer la barre de défilement pour le carrousel de sponsors */
+.hide-scrollbar {
+  -ms-overflow-style: none; 
+  scrollbar-width: none;    
+  scroll-behavior: smooth;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;           
+}
+
+/* Animation pour les logos */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}
+
+.logo-float:hover {
+  animation: float 2s ease-in-out infinite;
+}
+
+/* Dans globals.css ou styles.css */
+.glow-effect-blue {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.6) 0%, rgba(37, 99, 235, 0) 70%);
+    filter: blur(40px);
+    z-index: 0;
+  }
+
+ /* Effets de lueur verte */
+.glow-effect-green {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(34, 197, 94, 0.4) 0%, rgba(34, 197, 94, 0) 70%);
+    filter: blur(80px);
+    z-index: 0;
+  }
+  
+  /* Effet de texte dégradé */
+  .text-gradient-green {
+    background: linear-gradient(90deg, #4ade80 0%, #22c55e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  /* Ombre de lueur */
+  .shadow-glow-sm {
+    box-shadow: 0 0 15px rgba(34, 197, 94, 0.15);
+  }
+  
+  .shadow-glow-green {
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.2);
+  }
+  
+  .shadow-glow-green-lg {
+    box-shadow: 0 0 30px rgba(34, 197, 94, 0.3);
+  }
+  
+  .shadow-glow-lg {
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Animations */
+  .fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+  
+  .delay-200 {
+    animation-delay: 0.2s;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-bounce-slow {
+    animation: bounce 2s infinite;
+  }
+  
+  /* Motifs de fond */
+  .bg-grid-pattern {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
+  
+  .bg-noise-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+  
+  /* Durées de transition personnalisées */
+  .duration-7000 {
+    transition-duration: 7000ms;
+  }
+  
+  .glow-sm {
+    filter: drop-shadow(0 0 8px rgba(34, 197, 94, 0.5));
+  }
