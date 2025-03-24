@@ -19,10 +19,9 @@ export default function Hero() {
                 letterSpacing: '0px',
                 fontFamily: 'Circular Std, sans-serif'
               }}>
-            Chaque jour, des milliers de personnes perdent leur argent à cause de fraudes sur le <span className="text-green-600">Mobile Money</span>
+            Chaque jour, des milliers de personnes perdent leur argent à cause de fraudes sur le Mobile Money
           </h1>
           
-          <div className="w-24 h-1 bg-green-500 mx-auto mb-8 rounded-full"></div>
           
           <p className="text-gray-600 mb-10 max-w-3xl mx-auto text-center"
              style={{ 
