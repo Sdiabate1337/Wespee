@@ -1,14 +1,20 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'Sécurisez vos transactions Mobile Money | Protection contre les fraudes',
-  description: 'Nouvelle solution innovante pour protéger vos transactions Mobile Money contre les fraudes. Lancée pour répondre aux défis croissants de sécurité dans les paiements mobiles en Afrique.',
+  title: 'Wespee - Protection Mobile Money',
+  description: 'Sécurisez vos transactions Mobile Money',
 }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
-      <body>{children}</body>
-    </html>
-  )
-}
+      <head>
+        <link 
+          rel="stylesheet" 
+          href="https://db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book" 
+        />
+      </head>
+      <body>
+        {children}
+      </body>
+  
